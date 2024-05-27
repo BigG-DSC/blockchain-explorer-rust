@@ -21,9 +21,9 @@ To install and run, follow these steps:
 
 ## API Endpoints
 
-- `/transaction/{transaction_id}`: Retrieve details about a specific Bitcoin transaction.
-- `/block/{block_height}`: Get information about a particular block using its height.
-- `/address/{bitcoin_address}`: Explore transaction history for a Bitcoin address.
+- `/blockchain-status`: Retrieve details about the current status of the Bitcoin blockchain.
+- `/blockchain-address/{address}`: Retrieve details about a specific Bitcoin transaction.
+- `/blockchain-transaction/{transaction_id}`: Explore transaction history for a Bitcoin address.
 
 ## Contributing
 Contributions are welcome! If you want to contribute, please follow these steps:
