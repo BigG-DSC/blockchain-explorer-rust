@@ -1,6 +1,6 @@
 use serde::{Serialize, Deserialize};
 
-#[derive(Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug)]
 #[serde(rename_all = "camelCase")]
 pub struct Vin {
 	pub txid: String,
@@ -11,7 +11,7 @@ pub struct Vin {
 	pub value: String,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug)]
 #[serde(rename_all = "camelCase")]
 pub struct Vout {
 	pub value: String,
@@ -22,7 +22,7 @@ pub struct Vout {
 	pub is_address: bool,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug)]
 #[serde(rename_all = "camelCase")]
 pub struct BlockchainTransaction {
 	pub txid: String,

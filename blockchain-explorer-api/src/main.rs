@@ -2,7 +2,9 @@ mod services;
 mod models;
 
 use services::explorer_endpoints::{
-    get_status,
+    get_blockchain_status_request,
+    get_blockchain_address_request,
+    get_blockchain_transaction_request,
 };
 use actix_web::{HttpServer, App, middleware::Logger};
 
@@ -16,7 +18,9 @@ async fn main() -> std::io::Result<()> {
         let logger = Logger::default();
         App::new()
             .wrap(logger)
-            .service(get_status)
+            .service(get_blockchain_status_request)
+            .service(get_blockchain_address_request)
+            .service(get_blockchain_transaction_request)
     })
     .bind(("127.0.0.1", 5000))?
     .run()
