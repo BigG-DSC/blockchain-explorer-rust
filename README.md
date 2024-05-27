@@ -19,6 +19,12 @@ To install and run, follow these steps:
    cargo run
    ```
 
+2. **Set the .env file**: 
+   ```bash
+    API_ENDPOINT="https://btcbook.nownodes.io/api/"
+    NOW_NODES_KEY="YOUR-API-KEY"
+   ```
+
 ## API Endpoints
 
 - `/blockchain-status`: Retrieve details about the current status of the Bitcoin blockchain.
